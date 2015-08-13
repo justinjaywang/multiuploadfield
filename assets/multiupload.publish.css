@@ -140,6 +140,7 @@
 	border-bottom-left-radius: .4rem;
 	border-bottom-right-radius: .4rem;
 	text-align: center;
+	color: #a9a9a9;
 	padding: 10px;
 }
 .multiupload-drop.empty + .multiupload-droparea {
@@ -149,7 +150,6 @@
 }
 
 .multiupload-droparea div {
-	color: #998;
 	border: 2px dotted #ddd;
 	padding: 4rem;
 }
