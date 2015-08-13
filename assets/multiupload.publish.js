@@ -36,10 +36,11 @@
 			// Append drop area
 			$('<div />', {
 				class: 'multiupload-droparea',
-				html: '<span>' + Symphony.Language.get('Drop files') + '</span>',
+				html: '<div>' + Symphony.Language.get('Drop files here') + '</div>',
 				on: {
 					dragover: drag,
 					dragenter: drag,
+					dragleave: dragend,
 					dragend: dragend,
 					drop: drop
 				}
@@ -68,7 +69,7 @@
 				files.removeClass('empty');
 
 				var item = $('<li />', {
-					html: '<header><a>' + file.name + '</a><span class="multiupload-progress"></span><a class="destructor">' + Symphony.Language.get('In queue') + '</a></header>',
+					html: '<header><span><a>' + file.name + '</a></span><span class="multiupload-progress"></span><a class="destructor">' + Symphony.Language.get('In queue') + '</a></header>',
 					class: 'instance queued'
 				}).hide().appendTo(list).slideDown('fast');
 
